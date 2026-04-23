@@ -1,11 +1,10 @@
-num = int(input("Enter a three-digit number: "))
+correct_userid = "nikhil.12"
+correct_password = "nikhil@24"
 
-# Extract digits
-hundreds = num // 100
-tens = (num // 10) % 10
-ones = num % 10
+userid = input("Enter uder id:")
+password = input("Enter password:")
 
-# Calculate sum
-digit_sum = hundreds + tens + ones
-
-print("Sum of digits:", digit_sum)
+if userid == correct_userid and password == correct_password:
+    print("login successful")
+else:
+    print("Invalid user id or password")

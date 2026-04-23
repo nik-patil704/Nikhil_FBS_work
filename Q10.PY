@@ -1,11 +1,12 @@
-num = int(input("Enter a three-digit number: "))
-
-# Extract digits
-hundreds = num // 100
-tens = (num // 10) % 10
-ones = num % 10
-
-# Reverse number
-reversed_num = (ones * 100) + (tens * 10) + hundreds
-
-print("Reversed number:", reversed_num)
+gender = int(input('Enter gender(M/F):'))
+age = int(input('Enter age:'))
+if(gender == 'F'):
+    if(age >= 18):
+        print('Eligible for marriage.')
+    else:
+        print('Pehale padh lo.')
+else:
+    if(age >= 21):
+        print('Eligible for marriage.')
+    else:
+        print('Pehale kama lo.')

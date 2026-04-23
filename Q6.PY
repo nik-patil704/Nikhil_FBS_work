@@ -1,14 +1,11 @@
-basic = int(input("Enter basic salary: "))
+cost_price = int(input('Enter cost price:'))
+selling_price = int(input('enter selling price:'))
 
-# Calculating allowances
-da = 0.10 * basic
-ta = 0.12 * basic
-hra = 0.15 * basic
-
-# Total salary
-total_salary = basic + da + ta + hra
-
-print("DA =", da)
-print("TA =", ta)
-print("HRA =", hra)
-print("Total Salary =", total_salary)
+if selling_price > cost_price:
+    profit = selling_price - cost_price
+    print("profit =",profit)
+elif cost_price > selling_price:
+    loss = cost_price - selling_price
+    print("lost =", loss)
+else:
+    print("No profit, No loss")

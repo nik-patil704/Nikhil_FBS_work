@@ -1,10 +1,9 @@
-# Input from user
-hours = int(input("Enter hours: "))
-minutes = int(input("Enter minutes: "))
-seconds = int(input("Enter seconds: "))
+# Write a program to check if the given number is positive or negative.
+num = int(input('Enter  number:'))
+if(num == 0):
+    print('The number is neutral.')
+elif(num > 0):
+    print(f'{num} is a positive number.')
 
-# Convert to total seconds
-total_seconds = (hours * 3600) + (minutes * 60) + seconds
-
-# Output result
-print("Total seconds:", total_seconds)
+else:
+    print(f'{num} is a negative number.')

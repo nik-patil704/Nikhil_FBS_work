@@ -1,17 +1,16 @@
-amount = int(input("Enter amount: "))
+total_amount = 0
 
-# List of currency notes (Indian denominations)
-notes = [2000, 500, 200, 100, 50, 20, 10, 5, 2, 1]
+for i in range(5):
+    age = int(input(f"Enter age of person {i+1}: "))
+    ticket = int(input(f"Enter ticket amount for person {i+1}: "))
 
-total_notes = 0
+    if age < 12:
+        final_amount = ticket * 0.70   # 30% discount
+    elif age > 59:
+        final_amount = ticket * 0.50   # 50% discount
+    else:
+        final_amount = ticket          # full amount
 
-print("Notes required:")
+    total_amount += final_amount
 
-for note in notes:
-    if amount >= note:
-        count = amount // note
-        amount = amount % note
-        total_notes += count
-        print(note, ":", count)
-
-print("Minimum number of notes =", total_notes)
+print(f"Total amount to be paid for all: {total_amount}")
